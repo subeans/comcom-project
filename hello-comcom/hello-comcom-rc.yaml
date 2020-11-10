@@ -1,0 +1,20 @@
+apiVersion: v1
+kind: ReplicationController
+metadata:
+  name: hello-comcom-rc
+spec:
+  replicas: 3
+  selector:
+    app: hello-comcom
+  template:
+    metadata:
+      name: hello-comcom-pod
+      labels:
+        app: hello-comcom
+    spec:
+      containers:
+      - name: hello-comcom
+        image: gcr.io/comcomp-295213/hello-comcom
+        imagePullPolicy: Always
+        ports:
+        - containerPort: 8080
