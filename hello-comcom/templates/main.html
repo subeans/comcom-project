@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>
+        Find Largest Prime factor 
+    </title>
+</head>
+<body>
+    <form method="POST" action="/calculate">
+        <h3> Largest Prime factor of the given number </br></h3>
+        <h5> Input Number</h5>
+        <input type="text" name="num">
+        <button type="submit"> Find out </button>
+    </form>
+    <div>
+        <p>
+            {% if num==None %}
+            <h5> 숫자를 입력해주세요 </h5>
+            {% else %}
+                <p>  Largest Prime factor : {{num}}</p>
+            {% endif %}
+        </p>
+    </div>
+</body>
+</html>
