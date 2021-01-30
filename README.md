@@ -1,1 +1,1 @@
-# comcomProject
+# comcom-project
